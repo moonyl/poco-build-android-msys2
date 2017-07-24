@@ -1,0 +1,6 @@
+[submodule "ndk_toolchain"]
+	path = ndk_toolchain
+	url = https://github.com/moonyl/ndk_standalone_toolchain_msys.git
+[submodule "Poco_build_script"]
+	path = Poco_build_script
+	url = https://github.com/moonyl/Poco.git
