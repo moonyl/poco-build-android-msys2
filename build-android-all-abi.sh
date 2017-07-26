@@ -1,5 +1,7 @@
 #!/bin/sh
 
+rm -rf Poco_build_script/Build/Android/
+
 OPEN_SSL_INC=""
 if [ $(uname) == "MSYS_NT-10.0" ]; then
 OPEN_SSL_INC=$(cygpath -m $(pwd)/extern/openssl-1.0.2h/include)
