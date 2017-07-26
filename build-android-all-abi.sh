@@ -1,6 +1,12 @@
 #!/bin/sh
 
+OPEN_SSL_INC=""
+if [ $(uname) == "MSYS_NT-10.0" ]; then
 OPEN_SSL_INC=$(cygpath -m $(pwd)/extern/openssl-1.0.2h/include)
+elif [ $(uname) == "Linux" ]; then
+OPEN_SSL_INC=$(pwd)/extern/openssl-1.0.2h/include
+fi
+
 echo ${OPEN_SSL_INC}
 POCO_PREFIX=${POCO_PREFIX:=$(pwd)/Poco}
 OLD_PATH=$PATH
